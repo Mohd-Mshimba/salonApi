@@ -14,12 +14,12 @@ public class ServiceRenderedController {
     @Autowired
     private ServiceRenderedServices serviceRenderedService;
 
-    @PostMapping("/")
+    @PostMapping
     public ServiceRendered addServiceRendered(@RequestBody ServiceRendered s){
         return serviceRenderedService.addServiceRendered(s);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<ServiceRendered> getAll(){
         return serviceRenderedService.getAll();
     }
