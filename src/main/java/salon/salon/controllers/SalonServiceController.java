@@ -10,19 +10,19 @@ import salon.salon.services.SalonServiceServices;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin
 @RestController
 @RequestMapping("api/salonService")
 public class SalonServiceController {
     @Autowired
     private SalonServiceServices salonServiceService;
 
-    @PostMapping
+    @PostMapping("/")
     public SalonService addSalonService(@RequestBody SalonService s){
         return salonServiceService.addService(s);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<SalonService> getAll(){
         return salonServiceService.getAll();
     }

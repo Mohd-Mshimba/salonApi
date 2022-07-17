@@ -7,19 +7,19 @@ import salon.salon.services.EmployeeServices;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin
 @RestController
 @RequestMapping("api/employee")
 public class EmployeeController {
     @Autowired
     private EmployeeServices employeeService;
 
-    @PostMapping
+    @PostMapping("/")
     public Employee addEmployee(@RequestBody Employee s){
         return employeeService.addEmployee(s);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Employee> getAll(){
         return employeeService.getAll();
     }

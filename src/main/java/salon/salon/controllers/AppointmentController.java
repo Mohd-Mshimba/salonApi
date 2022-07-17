@@ -9,19 +9,19 @@ import salon.salon.services.AppointmentServices;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin
 @RestController
 @RequestMapping("api/appointment")
 public class AppointmentController {
     @Autowired
     private AppointmentServices appointmentService;
 
-    @PostMapping
+    @PostMapping("/")
     public Appointment addAppointment(@RequestBody Appointment s){
         return appointmentService.addAppointment(s);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Appointment> getAll(){
         return appointmentService.getAll();
     }

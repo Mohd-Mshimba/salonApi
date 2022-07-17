@@ -7,19 +7,19 @@ import salon.salon.services.CustomerServices;
 
 import java.util.List;
 import java.util.Optional;
-
+@CrossOrigin
 @RestController
 @RequestMapping("api/customer")
 public class CustomerController {
     @Autowired
     private CustomerServices customerService;
 
-    @PostMapping
+    @PostMapping("/")
     public Customer addCustomer(@RequestBody Customer s){
         return customerService.addCustomer(s);
     }
 
-    @GetMapping
+    @GetMapping("/")
     public List<Customer> getAll(){
         return customerService.getAll();
     }
