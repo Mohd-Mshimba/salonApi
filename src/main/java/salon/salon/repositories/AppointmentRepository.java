@@ -11,4 +11,5 @@ import java.util.List;
 public interface AppointmentRepository extends JpaRepository<Appointment,Long> {
     @Query(value = "Select * from appointment where  customer_customer_id=?1",nativeQuery = true)
     List<Appointment> getCustApp(Long id);
+
 }
