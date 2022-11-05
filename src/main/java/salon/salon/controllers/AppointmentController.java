@@ -26,6 +26,11 @@ public class AppointmentController {
         return appointmentService.getAll();
     }
 
+    @GetMapping("/getCustByApp/{id}")
+    public List<Appointment> getACustByApp(@PathVariable("id") Long id){
+        return appointmentService.getCustByApp(id);
+    }
+
     @GetMapping("/{id}")
     public Optional<Appointment> getById(@PathVariable Long id){
         return appointmentService.findById(id);

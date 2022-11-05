@@ -21,6 +21,10 @@ public class AppointmentServices {
         return appointmentRepo.findAll();
     }
 
+    public List<Appointment> getCustByApp(Long id){
+        return appointmentRepo.getCustApp(id);
+    }
+
     public Optional<Appointment> findById(Long id){
         return appointmentRepo.findById(id);
     }
