@@ -3,8 +3,6 @@ package salon.salon.models;
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
-import salon.salon.controllers.EmployeeController;
-
 import javax.persistence.*;
 import java.sql.Date;
 

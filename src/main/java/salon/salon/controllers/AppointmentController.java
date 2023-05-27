@@ -3,8 +3,6 @@ package salon.salon.controllers;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import salon.salon.models.Appointment;
-import salon.salon.models.Appointment;
-import salon.salon.services.AppointmentServices;
 import salon.salon.services.AppointmentServices;
 
 import java.util.List;

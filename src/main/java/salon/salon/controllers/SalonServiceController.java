@@ -1,11 +1,7 @@
 package salon.salon.controllers;
-
-
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
 import salon.salon.models.SalonService;
-import salon.salon.models.SalonService;
-import salon.salon.services.SalonServiceServices;
 import salon.salon.services.SalonServiceServices;
 
 import java.util.List;
