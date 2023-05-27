@@ -5,6 +5,7 @@ import org.springframework.stereotype.Service;
 import salon.salon.models.Appointment;
 import salon.salon.repositories.AppointmentRepository;
 
+import java.util.ArrayList;
 import java.util.List;
 import java.util.Optional;
 
@@ -21,8 +22,17 @@ public class AppointmentServices {
         return appointmentRepo.findAll();
     }
 
-    public List<Appointment> getCustByApp(Long id){
-        return appointmentRepo.getCustApp(id);
+    public List<Appointment> getCustById(Long id){
+        return appointmentRepo.getCustById(id);
+    }
+
+    public List<Appointment> getCustByEmail(String email){
+        List<Appointment> a = appointmentRepo.getCustByEmail(email);
+        if(a.size() > 0){
+            return a;
+        }else{
+            return new ArrayList<>();
+        }
     }
 
     public Optional<Appointment> findById(Long id){

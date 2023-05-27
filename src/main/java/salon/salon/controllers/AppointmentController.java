@@ -26,9 +26,14 @@ public class AppointmentController {
         return appointmentService.getAll();
     }
 
-    @GetMapping("/getCustByApp/{id}")
-    public List<Appointment> getACustByApp(@PathVariable("id") Long id){
-        return appointmentService.getCustByApp(id);
+    @GetMapping("/getCustById/{id}")
+    public List<Appointment> getACustById(@PathVariable("id") Long id){
+        return appointmentService.getCustById(id);
+    }
+
+    @GetMapping("/getCustByApp/{email}")
+    public List<Appointment> getACustByEmail(@PathVariable("email") String email){
+        return appointmentService.getCustByEmail(email);
     }
 
     @GetMapping("/{id}")
