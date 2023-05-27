@@ -17,12 +17,12 @@ public class SalonServiceController {
     @Autowired
     private SalonServiceServices salonServiceService;
 
-    @PostMapping("/")
+    @PostMapping
     public SalonService addSalonService(@RequestBody SalonService s){
         return salonServiceService.addService(s);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<SalonService> getAll(){
         return salonServiceService.getAll();
     }

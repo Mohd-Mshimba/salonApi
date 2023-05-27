@@ -14,12 +14,12 @@ public class CustomerController {
     @Autowired
     private CustomerServices customerService;
 
-    @PostMapping("/")
+    @PostMapping
     public Customer addCustomer(@RequestBody Customer s){
         return customerService.addCustomer(s);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<Customer> getAll(){
         return customerService.getAll();
     }

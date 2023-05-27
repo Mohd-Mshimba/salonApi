@@ -16,12 +16,12 @@ public class AppointmentController {
     @Autowired
     private AppointmentServices appointmentService;
 
-    @PostMapping("/")
+    @PostMapping
     public Appointment addAppointment(@RequestBody Appointment s){
         return appointmentService.addAppointment(s);
     }
 
-    @GetMapping("/")
+    @GetMapping
     public List<Appointment> getAll(){
         return appointmentService.getAll();
     }
