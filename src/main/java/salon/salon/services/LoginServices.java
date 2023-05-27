@@ -25,5 +25,4 @@ public class LoginServices {
             throw new ResponseStatusException(HttpStatus.NOT_FOUND,"User Not Found");
         }
     }
-
 }
