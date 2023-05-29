@@ -2,6 +2,7 @@ package salon.salon.controllers;
 
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.web.bind.annotation.*;
+import salon.salon.models.Appointment;
 import salon.salon.models.Customer;
 import salon.salon.services.CustomerServices;
 
@@ -22,6 +23,11 @@ public class CustomerController {
     @GetMapping
     public List<Customer> getAll(){
         return customerService.getAll();
+    }
+
+    @GetMapping("/getLogin/{email}")
+    public List<Customer> getLoginUser(@PathVariable("email") String email){
+        return customerService.getLoginUser(email);
     }
 
     @GetMapping("/{id}")

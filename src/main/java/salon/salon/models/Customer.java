@@ -18,6 +18,8 @@ public class Customer {
     private Long id;
     private String firstName;
     private String lastName;
+    private String middleName;
+    @Column(unique = true) // Make email field unique
     private String email;
     private String phoneNumber;
     private String street;
