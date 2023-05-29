@@ -6,7 +6,7 @@
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
 		<version>2.7.1</version>
-		<relativePath/> <!-- lookup parent from repository -->
+		<relativePath/>
 	</parent>
 	<groupId>salon</groupId>
 	<artifactId>salon</artifactId>
@@ -14,7 +14,7 @@
 	<name>salon</name>
 	<description>Salon project for Spring Boot</description>
 	<properties>
-<!--		<java.version>11</java.version>-->
+				<!-- <java.version>11</java.version>-->
 	</properties>
 	<dependencies>
 		<dependency>
