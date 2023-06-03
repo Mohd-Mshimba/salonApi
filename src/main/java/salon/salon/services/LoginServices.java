@@ -3,7 +3,7 @@ import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.stereotype.Service;
 import org.springframework.web.server.ResponseStatusException;
-import salon.salon.models.Employee;
+import org.springframework.transaction.annotation.Transactional;
 import salon.salon.models.Login;
 import salon.salon.repositories.LoginRepository;
 
@@ -31,5 +31,11 @@ public class LoginServices {
     public List<Login> getAllUser(){
         return loginRepository.findAll();
     }
+
+    @Transactional
+    public void deleteUserByUsername(String username) {
+        loginRepository.deleteUserByUsername(username);
+    }
+
 
 }

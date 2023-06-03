@@ -1,24 +1,20 @@
 package salon.salon.models;
+
 import lombok.AllArgsConstructor;
 import lombok.Data;
 import lombok.NoArgsConstructor;
 import javax.persistence.*;
-import java.sql.Date;
 
 @Data
-@Entity
 @NoArgsConstructor
 @AllArgsConstructor
-@Table(name = "appointment")
-public class Appointment {
+@Entity
+@Table(name ="role")
+public class Role {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    @Column(name = "appointment_id")
+    @Column(name = "role_id")
     private Long id;
-    private Date appointmentDate;
+    private String roleName;
     private String description;
-    private String status;
-
-    @ManyToOne
-    private Customer customer;
 }

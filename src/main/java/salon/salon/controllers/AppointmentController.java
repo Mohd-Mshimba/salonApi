@@ -29,7 +29,7 @@ public class AppointmentController {
         return appointmentService.getCustById(id);
     }
 
-    @GetMapping("/getCustByApp/{email}")
+    @GetMapping("/getAppointByEmail/{email}")
     public List<Appointment> getACustByEmail(@PathVariable("email") String email){
         return appointmentService.getCustByEmail(email);
     }

@@ -34,4 +34,8 @@ public class LoginController {
         return loginService.addUser(s);
     }
 
+    @DeleteMapping("/{username}")
+    public void deleteUserByUsername(@PathVariable String username) {
+        loginService.deleteUserByUsername(username);
+    }
 }

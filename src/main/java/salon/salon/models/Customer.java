@@ -25,6 +25,7 @@ public class Customer {
     private String street;
     private String city;
     private String state;
+    private Integer status;
     private String zipCode;
     private String gender;
 }

@@ -19,7 +19,6 @@ public class Documents {
     private String documentFile;
     private String name;
     private String Description;
-
     @ManyToOne
     private Appointment appointment;
 }

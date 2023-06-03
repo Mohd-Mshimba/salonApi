@@ -17,8 +17,12 @@ public class Employee {
     private Long id;
     private String firstName;
     private String lastName;
+    private String middleName;
     private String phoneNumber;
     private String city;
     private String gender;
-    private String role;
+    private String status;
+    private String email;
+    @ManyToOne
+    private Role roles;
 }
