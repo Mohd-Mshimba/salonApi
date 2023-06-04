@@ -16,7 +16,11 @@ public class Documents {
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     @Column(name = "customer_id")
     private Long id;
+
+    @Lob
+    @Column(name = "document_file", columnDefinition = "TEXT")
     private String documentFile;
+
     private String name;
     private String Description;
     @ManyToOne

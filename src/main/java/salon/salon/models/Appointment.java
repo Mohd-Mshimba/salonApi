@@ -17,6 +17,7 @@ public class Appointment {
     private Long id;
     private Date appointmentDate;
     private String description;
+    private String appointmentName;
     private String status;
 
     @ManyToOne
